@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+header.title {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  width: 50%;
+  border-bottom: 2px solid black;
+}
+.one-word {
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.game-container {
+  margin-top: 100px;
+  position: relative;
+}
+.game-container > div {
+  margin-bottom: 7px;
+}
+.win {
+  animation: rainbow 5s infinite;
+}
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0px auto 10px;
+}
+.spinner-container,
+h2 {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -110%);
+}
+h2 {
+  transform: translate(-50%, -220%);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
